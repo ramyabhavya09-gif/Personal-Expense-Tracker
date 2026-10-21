@@ -1,0 +1,290 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f4f9;
+  color: #252642;
+  padding: 25px 15px;
+}
+
+.container {
+  max-width: 650px;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.header h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #77788d;
+}
+
+.wallet {
+  font-size: 38px;
+}
+
+.balance-card {
+  background: linear-gradient(135deg, #6c4de6, #9475fa);
+  color: white;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px #6c4de633;
+}
+
+.balance-card p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.balance-card h2 {
+  font-size: 36px;
+  margin: 12px 0;
+  overflow-wrap: anywhere;
+}
+
+.balance-note {
+  font-size: 12px !important;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.summary-card,
+.form-card,
+.history-card {
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 3px 12px #2526420d;
+}
+
+.summary-card span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.summary-card h3 {
+  margin-top: 12px;
+  font-size: 22px;
+  overflow-wrap: anywhere;
+}
+
+.income span,
+.income h3 {
+  color: #159568;
+}
+
+.expense span,
+.expense h3 {
+  color: #e05263;
+}
+
+.form-card,
+.history-card {
+  margin-bottom: 20px;
+}
+
+.form-card h2,
+.history-card h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 14px 0 8px;
+}
+
+input,
+select {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #dedfeb;
+  border-radius: 9px;
+  font-size: 15px;
+  background: white;
+  color: #252642;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #9475fa;
+  border-color: transparent;
+}
+
+button {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.add-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  color: white;
+  background: #6c4de6;
+  border: none;
+  border-radius: 9px;
+  transition: background 0.2s;
+}
+
+.add-btn:hover {
+  background: #5638ce;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.history-header h2 {
+  margin-bottom: 0;
+}
+
+#transaction-count {
+  color: #77788d;
+  font-size: 12px;
+}
+
+#transaction-list {
+  list-style: none;
+  margin-top: 18px;
+}
+
+.transaction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eeeef4;
+}
+
+.transaction-info {
+  min-width: 0;
+}
+
+.transaction-info h3 {
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+.transaction-info p {
+  color: #89899a;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.transaction-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.transaction-amount {
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.amount-income {
+  color: #159568;
+}
+
+.amount-expense {
+  color: #e05263;
+}
+
+.delete-btn {
+  background: #fff0f1;
+  color: #d83f50;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 7px;
+}
+
+.delete-btn:hover {
+  background: #ffdade;
+}
+
+#empty-message {
+  color: #89899a;
+  text-align: center;
+  padding: 25px 0 5px;
+  font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  color: #89899a;
+  font-size: 12px;
+  padding: 10px;
+}
+
+@media (max-width: 450px) {
+  body {
+    padding: 18px 10px;
+  }
+
+  .header h1 {
+    font-size: 23px;
+  }
+
+  .balance-card {
+    padding: 22px;
+  }
+
+  .balance-card h2 {
+    font-size: 30px;
+  }
+
+  .summary-card,
+  .form-card,
+  .history-card {
+    padding: 16px;
+  }
+
+  .summary-card h3 {
+    font-size: 18px;
+  }
+
+  .transaction {
+    align-items: flex-start;
+  }
+
+  .transaction-right {
+    gap: 6px;
+  }
+
+  .transaction-amount {
+    font-size: 12px;
+  }
+
+  .delete-btn {
+    padding: 7px;
+  }
+}
